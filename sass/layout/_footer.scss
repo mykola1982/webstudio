@@ -1,0 +1,85 @@
+/*cтилізація футера*/
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  @include font(700, 14px, 16px);
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-contact__logo {
+  margin-bottom: 20px;
+}
+
+.footer-contact__link {
+  color: rgba(255, 255, 255, 0.6);
+  @include font(null, 14px, 24px);
+  text-decoration: none;
+  display: block;
+  transition: color 250ms var(--timing-function);
+
+  &--white {
+    color: #ffffff;
+  }
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+
+.footer-contact__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/*----------стилізація форми футера ------------ */
+
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+
+  border: 1px solid var(--brand-color);
+  border-radius: 4px;
+}
+
+.subscribe__form {
+  display: flex;
+}
+
+.subscribe__input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-left: 16px;
+  outline: none;
+  transition: border-color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    border-color: var(--brand-color);
+  }
+
+  &::placeholder {
+    @include font(null, 16px, 20px);
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+}
