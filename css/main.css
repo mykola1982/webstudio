@@ -28,6 +28,8 @@ button {
 
 img {
   display: block;
+  height: auto;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -599,9 +601,6 @@ img {
     width: calc((100% - 90px) / 4);
   }
 }
-.team__item > img {
-  width: 100%;
-}
 .team__socials {
   margin-top: 16px;
 }
@@ -756,11 +755,22 @@ img {
 
 .portfolio__btn-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
 }
-
-.portfolio__btn-item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__btn-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__btn {
@@ -784,17 +794,23 @@ img {
 }
 
 .portfolio__list {
-  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  gap: 30px;
 }
 
 .portfolio__item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio__link {
@@ -804,6 +820,23 @@ img {
 }
 .portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.portfolio__content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__content {
+    flex-grow: 1;
+  }
 }
 
 .portfolio__title {
@@ -820,11 +853,6 @@ img {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-
-.portfolio__content {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
 }
 
 .portfolio__thump {

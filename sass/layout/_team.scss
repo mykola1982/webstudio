@@ -1,11 +1,11 @@
 .team {
   background-color: #f5f4fa;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
- 
 
   &__item {
     width: 100%;
@@ -22,10 +22,6 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: #ffffff;
-
-     & >img {
-    width: 100%;
-  }
   }
 
   &__socials {
