@@ -674,13 +674,25 @@ img {
 }
 .footer .container {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 60px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-contact__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
 }
 
 .footer-title {
   display: inline-block;
-  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -709,26 +721,37 @@ img {
   color: var(--brand-color);
 }
 
-.footer-contact__item:not(:last-child) {
-  margin-bottom: 9px;
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
 }
 
 /*----------стилізація форми футера ------------ */
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+}
 .subscribe__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
   border: 1px solid var(--brand-color);
   border-radius: 4px;
 }
-
 .subscribe__form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
 }
-
 .subscribe__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   color: #ffffff;
@@ -737,6 +760,11 @@ img {
   padding-left: 16px;
   outline: none;
   transition: border-color 250ms var(--timing-function);
+}
+@media screen and (min-width: 480px) {
+  .subscribe__input {
+    width: 450px;
+  }
 }
 .subscribe__input:hover, .subscribe__input:focus {
   border-color: var(--brand-color);
@@ -748,7 +776,6 @@ img {
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__icon {
   margin-left: 10px;
 }
