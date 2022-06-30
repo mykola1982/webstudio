@@ -1,0 +1,104 @@
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+
+  transform: translateX(0);
+  transition: transform 1000ms var(--timing-function);
+
+  
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(100%);  
+  transition:  1000ms var(--timing-function);
+}
+
+.menu-close-btn {
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+
+  border: none;
+  color: #212121;
+  transition: color 250ms var(--timing-function);
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-menu__link {
+  @include font(500, 40px, 47px, 0.02em);
+  text-decoration: none;
+  color: #212121;
+}
+
+.mob-menu__link.curret {
+  color: var(--brand-color);
+}
+
+.mob-contact {
+  margin-bottom: 64px;
+}
+.mob-contac__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-contac__item:first-child > .mob-contac__link {
+  @include font(500, 34px, 40px, 0.02em);
+}
+
+.mob-contac__link {
+  @include font(500, 24px, 28px, 0.02em);
+  text-decoration: none;
+  color: #757575;
+
+  transition: color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+.mob-soc {
+  display: flex;
+  justify-content: center;
+}
+.mob-soc__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc__link {
+  @include font(500, 18px, 22px, 0.02em);
+  text-decoration: none;
+  color: #2196f3;
+}

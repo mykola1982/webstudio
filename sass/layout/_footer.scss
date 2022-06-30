@@ -9,33 +9,41 @@
     align-items: center;
     row-gap: 60px;
 
-    // justify-content: space-between;
-    // align-items: baseline;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 165px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    @media screen and (min-width: 1200px) {
+      column-gap: 0;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 }
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // можливо для центрування застосувати міксин
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 8px;
-  }
-}
-.footer-title {
-  display: inline-block;
-  // margin-bottom: 20px;
-  @include font(700, 14px, 16px);
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .footer-contact__logo {
+  text-align: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.footer-contact__item {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.footer-contact__item:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-contact__link {
@@ -54,32 +62,39 @@
   }
 }
 
-// .footer-contact__item:not(:last-child) {
-//   margin-bottom: 9px;
-// }
-.join {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
+.footer-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  @include font(700, 14px, 16px);
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
+.join {
+  @media screen and (min-width: 768px) {
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+  }
+}
 /*----------стилізація форми футера ------------ */
 
 .subscribe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-  width: 100%;
-
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 
   &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin-left: 12px;
-
     border: 1px solid var(--brand-color);
     border-radius: 4px;
   }
@@ -89,18 +104,25 @@
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    width: 100%;
-   
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      column-gap: 12px;
+    }
   }
 
   &__input {
-   width: 100%;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
 
- @media screen and (min-width: 480px) {
-    width: 450px;
-  }
-
-    
     height: 50px;
     background-color: transparent;
     color: #ffffff;
@@ -125,3 +147,5 @@
     margin-left: 10px;
   }
 }
+
+

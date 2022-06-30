@@ -1,22 +1,40 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
 
-  & .container {
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  & > .container {
     display: flex;
     align-items: center;
   }
 
   &__logo {
-    margin-right: 93px;
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }
 
 /*стилізація навігації сайту*/
 
 .nav {
-  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -54,7 +72,19 @@
 
 /*стилізація навігаціі контактів*/
 .contact {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .header__contact {
@@ -64,8 +94,10 @@
 .contact__link {
   color: #757575;
 
-
-  @include font(500, 14px, 16px, 0.02em);
+  @include font(500, 12px, 14px, 0.02em);
+  @media screen and (min-width: 1200px) {
+    @include font(500, 14px, 16px, 0.02em);
+  }
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -77,15 +109,48 @@
 }
 
 .contact__item {
-  display: flex;
-  align-items: center;
-  &:not(:last-child) {
-    margin-right: 30px;
+}
+
+.contact__icon-tab {
+  display: block;
+  margin-right: 8px;
+  fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    display: none;
   }
 }
 
 .contact__icon {
-  display: block;
+  display: none;
   margin-right: 10px;
   fill: currentColor;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.menu-open-btn {
+  padding: 0;
+  margin-left: auto;
+
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+   border: none;
+  color: #212121;
+  transition: color 250ms var(--timing-function);
+
+ @media screen and (min-width: 768px) {
+   display: none;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
 }

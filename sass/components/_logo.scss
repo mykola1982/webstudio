@@ -1,9 +1,14 @@
 .logo {
   color: var(--brand-color);
   font-family: 'Raleway', sans-serif;
-  @include font(700, 26px, 31px);
+  @include font(700, 24px, 28px);
   text-decoration: none;
   display: block;
+
+ @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 31px);
+  }
+
   &--dark {
     color: #212121;
   }
