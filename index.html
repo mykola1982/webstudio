@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WebStudio</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -15,9 +14,7 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/main.min.css" />
-
 </head>
-
 <body class="page">
   <!--Шапка страницы-->
   <header class="header">
@@ -33,45 +30,35 @@
       <ul class="contact header__contact list">
         <li class="contact__item">
           <a href="mailto:info@devstudio.com" class="contact__link">
-
             <svg class="contact__icon-tab" width="14" height="10">
               <use href="./images/icons.svg#icon-envelope-tab"></use>
             </svg>
-
             <svg class="contact__icon" width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>info@devstudio.com</a>
         </li>
         <li class="contact__item">
           <a href="tel:+380961111111" class="contact__link">
-
             <svg class="contact__icon-tab" width="10" height="14">
               <use href="./images/icons.svg#icon-smartphone-tab"></use>
             </svg>
-
             <svg class="contact__icon" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
-
-
       <button type="button" class="menu-open-btn">
         <svg class="menu-open-btn__icon" width="40" height="40">
           <use href="./images/icons.svg#icon-menu"></use>
         </svg></button>
     </div>
-
     <!-- меню для мобільної версії -->
     <div class="mob-menu is-hidden">
       <div class="container">
-
         <button type="button" class="menu-close-btn">
           <svg class="menu-close-btn__icon" width="40" height="40">
             <use href="./images/icons.svg#icon-menu-close"></use>
           </svg></button>
-
-
         <ul class="mob-menu__list list">
           <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link curret">Студия</a></li>
           <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link">Портфолио</a></li>
@@ -89,7 +76,6 @@
             </li>
             </li>
           </ul>
-
           <ul class="mob-soc list">
             <li class="mob-soc__item"><a href="" class="mob-soc__link">Instagram</a></li>
             <li class="mob-soc__item"><a href="" class="mob-soc__link">Twitter</a></li>
@@ -97,9 +83,7 @@
             <li class="mob-soc__item"><a href="" class="mob-soc__link">LinkedIn</a></li>
           </ul>
         </div>
-
       </div>
-
     </div>
   </header>
   <!--Уникальный контент страницы-->
@@ -167,20 +151,25 @@
         <ul class="work__list list">
           <li class="work__item">
             <div class="work__thumb">
-              <img src="./images/photo1.jpg" alt="разработка приложений" width="370" />
+              <img srcset="
+              ./images/photo1.jpg 1x,
+              ./images/photo1-2x.jpg 2x" src="./images/photo1.jpg" alt="разработка приложений" width="370" />
               <h3 class="work__content">Десктопные приложения</h3>
             </div>
           </li>
-
           <li class="work__item">
             <div class="work__thumb">
-              <img src="./images/photo2.jpg" alt="разработка мобильных приложений" width="370" />
+              <img srcset="
+              ./images/photo2.jpg 1x,
+              ./images/photo2-2x.jpg 2x" src="./images/photo2.jpg" alt="разработка мобильных приложений" width="370" />
               <h3 class="work__content">Мобильные приложения</h3>
             </div>
           </li>
           <li class="work__item">
             <div class="work__thumb">
-              <img src="./images/photo3.jpg" alt="веб дизайн" width="370" />
+              <img srcset="
+              ./images/photo3.jpg 1x,
+              ./images/photo3-2x.jpg 2x" src="./images/photo3.jpg" alt="веб дизайн" width="370" />
               <h3 class="work__content">Дизайнерские решения</h3>
             </div>
           </li>
@@ -192,7 +181,18 @@
         <h2 class="team__title title">Наша команда</h2>
         <ul class="team__list list">
           <li class="team__item">
-            <img src="./images/Demianenko.jpg" alt="работник 1" width="270" />
+            <picture>
+              <source srcset="
+              ./images/Demianenko.jpg 1x,
+              ./images/Demianenko-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="
+                ./images/Demianenko_tab.jpg 1x,
+                ./images/Demianenko_tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="
+                ./images/Demianenko_mob.jpg 1x,
+                ./images/Demianenko_mob-2x.jpg 2x" media="(min-width: 480px)">
+              <img src="./images/Demianenko_mob.jpg" alt="работник 1" width="450" />
+            </picture>
             <div class="team-content">
               <h3 class="team-content__title">Игорь Демьяненко</h3>
               <p lang="en" class="team-content__text">Product Designer</p>
@@ -225,7 +225,18 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/Repyna.jpg" alt="работник 2" width="270" />
+            <picture>
+              <source srcset="
+                ./images/Repyna.jpg 1x,
+                ./images/Repyna-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="
+                  ./images/Repyna_tab.jpg 1x,
+                  ./images/Repyna_tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="
+                  ./images/Repyna_mob.jpg 1x,
+                  ./images/Repyna_mob-2x.jpg 2x" media="(min-width: 480px)">
+              <img src="./images/Repyna_mob.jpg" alt="работник 2" width="450" />
+            </picture>
             <div class="team-content">
               <h3 class="team-content__title">Ольга Репина</h3>
               <p lang="en" class="team-content__text">Frontend Developer</p>
@@ -258,7 +269,18 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/Tarasov.jpg" alt="работник 3" width="270" />
+            <picture>
+              <source srcset="
+                  ./images/Tarasov.jpg 1x,
+                  ./images/Tarasov-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="
+                    ./images/Tarasov_tab.jpg 1x,
+                    ./images/Tarasov_tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="
+                    ./images/Tarasov_mob.jpg 1x,
+                    ./images/Tarasov_mob-2x.jpg 2x" media="(min-width: 480px)">
+              <img src="./images/Tarasov_mob.jpg" alt="работник 3" width="450" />
+            </picture>
             <div class="team-content">
               <h3 class="team-content__title">Николай Тарасов</h3>
               <p lang="en" class="team-content__text">Marketing</p>
@@ -291,7 +313,18 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/Ermakov.jpg" alt="работник 4" width="270" />
+            <picture>
+              <source srcset="
+                  ./images/Ermakov.jpg 1x,
+                  ./images/Ermakov-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="
+                    ./images/Ermakov_tab.jpg 1x,
+                    ./images/Ermakov_tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="
+                    ./images/Ermakov_mob.jpg 1x,
+                    ./images/Ermakov_mob-2x.jpg 2x" media="(min-width: 480px)">
+              <img src="./images/Ermakov_mob.jpg" alt="работник 4" width="450" />
+            </picture>
             <div class="team-content">
               <h3 class="team-content__title">Михаил Ермаков</h3>
               <p lang="en" class="team-content__text">UI Designer</p>
@@ -428,7 +461,6 @@
           </li>
         </ul>
       </div>
-
       <!--------------- форма футера --------------------------->
       <div class="subscribe">
         <b class="subscribe__title footer-title">Подпишитесь на рассылку</b>
@@ -444,10 +476,8 @@
       </div>
     </div>
   </footer>
-
   <!-------------------- модальне вікно-------------------------->
   <div class="backdrop is-hidden" data-modal>
-
     <div class="modal">
       <button type="button" class="close-btn" data-modal-close>
         <svg class="close-btn__icon" width="18" height="18">
@@ -508,11 +538,8 @@
         <button type="submit" class="modal__send-btn btn">Отправить</button>
       </form>
     </div>
-
   </div>
-
   <script src="./js/modal.js"></script>
   <script src="./js/menu.js"></script>
 </body>
-
 </html>
