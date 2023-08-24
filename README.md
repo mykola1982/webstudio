@@ -1,6 +1,6 @@
 # Web Studio Website
 
-The [Web Studio](https://lisitsyna-anna.github.io/webstudio/) website is a platform designed for a
+The [Web Studio](https://mykola1982.github.io/webstudio/) website is a platform designed for a
 web design and development studio. It serves as an online showcase for their services, team members,
 client information, and contact details. The website consists of two main pages: Home and Portfolio.
 
